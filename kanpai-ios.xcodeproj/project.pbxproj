@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E1AE21F1A7A2B8200B68786 /* KPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1AE21E1A7A2B8200B68786 /* KPClient.swift */; };
+		2E1AE2221A7A2C1500B68786 /* KPClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1AE2211A7A2C1500B68786 /* KPClientSpec.swift */; };
+		2E1AE2231A7A4CCD00B68786 /* KPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1AE21E1A7A2B8200B68786 /* KPClient.swift */; };
 		2E3F846B1A78E75F00E74F68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3F846A1A78E75F00E74F68 /* AppDelegate.swift */; };
 		2E3F846D1A78E75F00E74F68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3F846C1A78E75F00E74F68 /* ViewController.swift */; };
 		2E3F84701A78E75F00E74F68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E3F846E1A78E75F00E74F68 /* Main.storyboard */; };
 		2E3F84721A78E75F00E74F68 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E3F84711A78E75F00E74F68 /* Images.xcassets */; };
 		2E3F84751A78E75F00E74F68 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E3F84731A78E75F00E74F68 /* LaunchScreen.xib */; };
 		2E3F84811A78E75F00E74F68 /* kanpai_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3F84801A78E75F00E74F68 /* kanpai_iosTests.swift */; };
+		2E7F11251A7C99E90030A43B /* KPParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7F11241A7C99E90030A43B /* KPParty.swift */; };
+		2E7F11271A7C9BEC0030A43B /* KPGuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7F11261A7C9BEC0030A43B /* KPGuest.swift */; };
+		AC9A50FCAE40D2481A76901B /* Pods_kanpai_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74E5D60AD5BE309E2509DFF /* Pods_kanpai_iosTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E1AE21E1A7A2B8200B68786 /* KPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KPClient.swift; sourceTree = "<group>"; };
+		2E1AE2211A7A2C1500B68786 /* KPClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KPClientSpec.swift; sourceTree = "<group>"; };
 		2E3F84651A78E75F00E74F68 /* kanpai-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kanpai-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E3F84691A78E75F00E74F68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E3F846A1A78E75F00E74F68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +44,11 @@
 		2E3F847A1A78E75F00E74F68 /* kanpai-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kanpai-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E3F847F1A78E75F00E74F68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E3F84801A78E75F00E74F68 /* kanpai_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kanpai_iosTests.swift; sourceTree = "<group>"; };
+		2E7F11241A7C99E90030A43B /* KPParty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KPParty.swift; path = Model/KPParty.swift; sourceTree = "<group>"; };
+		2E7F11261A7C9BEC0030A43B /* KPGuest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KPGuest.swift; path = Model/KPGuest.swift; sourceTree = "<group>"; };
+		9EEF775F46AD656BCF2E228B /* Pods-kanpai-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kanpai-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kanpai-iosTests/Pods-kanpai-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AB77F4A187F5A47C1DEDFFCA /* Pods-kanpai-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kanpai-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kanpai-iosTests/Pods-kanpai-iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		D74E5D60AD5BE309E2509DFF /* Pods_kanpai_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kanpai_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,18 +63,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC9A50FCAE40D2481A76901B /* Pods_kanpai_iosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C95529BEB263AB41F9B4435 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D74E5D60AD5BE309E2509DFF /* Pods_kanpai_iosTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2E1AE2131A7A2B3C00B68786 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				2E1AE21E1A7A2B8200B68786 /* KPClient.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		2E1AE2201A7A2C0100B68786 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				2E1AE2211A7A2C1500B68786 /* KPClientSpec.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
 		2E3F845C1A78E75F00E74F68 = {
 			isa = PBXGroup;
 			children = (
 				2E3F84671A78E75F00E74F68 /* kanpai-ios */,
 				2E3F847D1A78E75F00E74F68 /* kanpai-iosTests */,
 				2E3F84661A78E75F00E74F68 /* Products */,
+				9F87CF20C22F8E60CC8179E4 /* Pods */,
+				2C95529BEB263AB41F9B4435 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +117,8 @@
 		2E3F84671A78E75F00E74F68 /* kanpai-ios */ = {
 			isa = PBXGroup;
 			children = (
+				2E7F11231A7C99CC0030A43B /* Model */,
+				2E1AE2131A7A2B3C00B68786 /* Client */,
 				2E3F846A1A78E75F00E74F68 /* AppDelegate.swift */,
 				2E3F846C1A78E75F00E74F68 /* ViewController.swift */,
 				2E3F846E1A78E75F00E74F68 /* Main.storyboard */,
@@ -98,6 +140,7 @@
 		2E3F847D1A78E75F00E74F68 /* kanpai-iosTests */ = {
 			isa = PBXGroup;
 			children = (
+				2E1AE2201A7A2C0100B68786 /* Client */,
 				2E3F84801A78E75F00E74F68 /* kanpai_iosTests.swift */,
 				2E3F847E1A78E75F00E74F68 /* Supporting Files */,
 			);
@@ -110,6 +153,24 @@
 				2E3F847F1A78E75F00E74F68 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2E7F11231A7C99CC0030A43B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2E7F11241A7C99E90030A43B /* KPParty.swift */,
+				2E7F11261A7C9BEC0030A43B /* KPGuest.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9F87CF20C22F8E60CC8179E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9EEF775F46AD656BCF2E228B /* Pods-kanpai-iosTests.debug.xcconfig */,
+				AB77F4A187F5A47C1DEDFFCA /* Pods-kanpai-iosTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,9 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E3F84871A78E75F00E74F68 /* Build configuration list for PBXNativeTarget "kanpai-iosTests" */;
 			buildPhases = (
+				E047CB5EEA96A8DD69F5A867 /* Check Pods Manifest.lock */,
 				2E3F84761A78E75F00E74F68 /* Sources */,
 				2E3F84771A78E75F00E74F68 /* Frameworks */,
 				2E3F84781A78E75F00E74F68 /* Resources */,
+				B58922AC77327EC207570D3D /* Copy Pods Resources */,
+				C2A88FCC78571FB12E5A8EC5 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,13 +271,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B58922AC77327EC207570D3D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kanpai-iosTests/Pods-kanpai-iosTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2A88FCC78571FB12E5A8EC5 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kanpai-iosTests/Pods-kanpai-iosTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E047CB5EEA96A8DD69F5A867 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2E3F84611A78E75F00E74F68 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E7F11271A7C9BEC0030A43B /* KPGuest.swift in Sources */,
 				2E3F846D1A78E75F00E74F68 /* ViewController.swift in Sources */,
+				2E1AE21F1A7A2B8200B68786 /* KPClient.swift in Sources */,
 				2E3F846B1A78E75F00E74F68 /* AppDelegate.swift in Sources */,
+				2E7F11251A7C99E90030A43B /* KPParty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +337,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E3F84811A78E75F00E74F68 /* kanpai_iosTests.swift in Sources */,
+				2E1AE2231A7A4CCD00B68786 /* KPClient.swift in Sources */,
+				2E1AE2221A7A2C1500B68786 /* KPClientSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +471,7 @@
 		};
 		2E3F84881A78E75F00E74F68 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EEF775F46AD656BCF2E228B /* Pods-kanpai-iosTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -373,6 +491,7 @@
 		};
 		2E3F84891A78E75F00E74F68 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB77F4A187F5A47C1DEDFFCA /* Pods-kanpai-iosTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -405,6 +524,7 @@
 				2E3F84861A78E75F00E74F68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E3F84871A78E75F00E74F68 /* Build configuration list for PBXNativeTarget "kanpai-iosTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +533,7 @@
 				2E3F84891A78E75F00E74F68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

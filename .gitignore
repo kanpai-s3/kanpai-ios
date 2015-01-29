@@ -15,7 +15,10 @@ xcuserdata
 *.moved-aside
 DerivedData
 *.xcuserstate
-
+Coverage
+Podfile.lock
+Pods/*
+Gemfile.lock
 
 ### Swift ###
 # Xcode
@@ -74,12 +77,6 @@ DerivedData
 *.xcuserstate
 
 # CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
-#
-# Pods/
 
 
 ### OSX ###
