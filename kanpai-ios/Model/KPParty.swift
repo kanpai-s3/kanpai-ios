@@ -6,14 +6,31 @@
 //
 
 import UIKit
+import Realm
 
-class KPParty: NSObject {
+class KPParty: RLMObject {
    
     dynamic var id: String?
-    dynamic let name: String
-    dynamic let beginAt: NSDate
+    dynamic let name: String = ""
+    dynamic let beginAt: NSDate = NSDate()
     dynamic var location: String?
     dynamic var message: String?
+    
+    override init!() {
+        super.init()
+    }
+    
+    override init!(object value: AnyObject!, schema: RLMSchema!) {
+        super.init(object: value, schema: schema)
+    }
+    
+    override init!(object: AnyObject!) {
+        super.init(object: object)
+    }
+    
+    override init!(objectSchema schema: RLMObjectSchema!) {
+        super.init(objectSchema: schema)
+    }
     
     init(name: String, beginAt: NSDate) {
         self.name = name
