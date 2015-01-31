@@ -1,0 +1,39 @@
+{
+  "id": "CDAF9924-EEC8-467A-A822-AA4DB2887814",
+  "owner": "河島",
+  "begin_at": "2014-11-13T05:00:00Z", // ISO 8601 UTC 形式
+  "location": "横浜　スカイビル　北海道",
+  "guests": [{
+    "id": "637c27a0-6c97-11e4-9803-0800200c9a66",
+    "name": "野田",
+    "tel": "+14158675309",
+    "attendance": true,
+    "message_url": "https://kanpai.com/guests/637c27a0-6c97-11e4-9803-0800200c9a66/message",
+    "url": "https://kanpai.com/guests/637c27a0-6c97-11e4-9803-0800200c9a66",
+    "created_at": "2014-11-13T01:00:00Z",
+    "updated_at": "2014-11-13T02:00:00Z"
+  }, {
+    "id": "d8139120-6c97-11e4-9803-0800200c9a66",
+    "name": "島村",
+    "tel": "+14158675310",
+    "attendance": true,
+    "message_url": "https://kanpai.com/guests/d8139120-6c97-11e4-9803-0800200c9a66/message",
+    "url": "https://kanpai.com/guests/d8139120-6c97-11e4-9803-0800200c9a66,
+    "created_at": "2014-11-13T01:00:00Z",
+    "updated_at": "2014-11-13T02:00:00Z"
+  }, {
+    "id": "27360d00-6c98-11e4-9803-0800200c9a66",
+    "name": "村上",
+    "tel": "+14158675311",
+    "attendance": false,
+    "message_url": null,
+    "url": "https://kanpai.com/guests/27360d00-6c98-11e4-9803-0800200c9a66",
+    "created_at": "2014-11-13T01:00:00Z",
+    "updated_at": "2014-11-13T02:00:00Z"
+  }],
+  "guests_url": "https://kanpai.com/parties/CDAF9924-EEC8-467A-A822-AA4DB2887814/guests",
+  "message": "突然飲みたくなったので，開催します！\n空いている人いたら，ご参加くださーい！",
+  "url": "https://kanpai.com/parties/CDAF9924-EEC8-467A-A822-AA4DB2887814",
+  "created_at": "2014-11-13T01:00:00Z",
+  "updated_at": "2014-11-13T02:00:00Z"
+}
