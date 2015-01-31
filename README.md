@@ -2,9 +2,10 @@
 
 iOS client for kanpai project
 
-## How to set up for contribution
+## How to set up
 
-    $ bundle install; bundle exec pod install 
+    $ bundle install
+    $ bundle exec pod install 
 
 ## Run test
 
