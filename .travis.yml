@@ -1,0 +1,5 @@
+language: objective-c
+before_install:
+  - bundle install
+  - bundle exec pod install
+script: bundle exec rake test

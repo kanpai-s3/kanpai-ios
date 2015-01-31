@@ -5,4 +5,5 @@ gem 'cocoapods-core'
 gem 'xcodeproj'
 gem 'claide'
 gem 'rake'
+gem 'travis-xcodebuild'
 
