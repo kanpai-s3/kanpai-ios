@@ -105,6 +105,21 @@ class KPClient {
             callback(error, guest)
         }
     }
+    
+    func updateGuest(guest: KPGuest, callback: (NSError?) -> Void) {
+        if guest.id == nil {
+            NSException(name: KPClientErrorDomain, reason: "need a guest id to update guest", userInfo: nil).raise()
+            return
+        }
+        
+        var params = [
+            "attendance": guest.attendance
+        ]
+        
+        self.request(.PUT, "/guests/\(guest.id!)", params: params) { (error, json) in
+            callback(error)
+        }
+    }
 }
 
 

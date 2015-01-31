@@ -248,6 +248,78 @@ class KPClientSpec: QuickSpec {
                     }
                 }
             })
+            
+            describe("# updateGuest()", {
+                let client = KPClient(baseURL: "http://example.com")
+                let guest = KPGuest(name: "noda", phoneNumber: "08099999999")
+                
+                beforeEach {
+                    guest.id = "f6bbbd24-a95e-11e4-89d3-123b93f75cba"
+                }
+                
+                it("should success to update guest") {
+                    stubResponse("/guests/\(guest.id!)", nil)
+                    
+                    waitUntil { done in
+                        client.updateGuest(guest) { (error) in
+                            expect(error).to(beNil())
+                            done()
+                        }
+                    }
+                }
+                
+                it("should throw fatal error becase guest dosen't have id") {
+                    guest.id = nil
+                    expect {
+                        client.updateGuest(guest) { (error) in
+                        }
+                    }.to(raiseException())
+                }
+                
+                it("should return error for invalid parameter") {
+                    stubResponseWithStatusCode("/guests/\(guest.id!)", "invalid_parameter.json", 400)
+                    
+                    waitUntil { done in
+                        client.updateGuest(guest) { (error) in
+                            expect(error).notTo(beNil())
+                            expect(error!.domain).to(equal(KPClientErrorDomain))
+                            let message = error!.userInfo?[NSLocalizedDescriptionKey] as? String
+                            expect(message).notTo(beNil())
+                            expect(message).to(equal("invalid parameter"))
+                            done()
+                        }
+                    }
+                }
+                
+                it("should return error for internal server error") {
+                    stubResponseWithStatusCode("/guests/\(guest.id!)", "internal_server_error.json", 400)
+                    
+                    waitUntil { done in
+                        client.updateGuest(guest) { (error) in
+                            expect(error).notTo(beNil())
+                            expect(error!.domain).to(equal(KPClientErrorDomain))
+                            let message = error!.userInfo?[NSLocalizedDescriptionKey] as? String
+                            expect(message).notTo(beNil())
+                            expect(message).to(equal("internal server error"))
+                            done()
+                        }
+                    }
+                }
+                
+                it("should return error for unkown error") {
+                    stubResponseWithStatusCode("/guests/\(guest.id!)", nil, 400)
+                    
+                    waitUntil { done in
+                        client.updateGuest(guest) { (error) in
+                            expect(error).notTo(beNil())
+                            expect(error!.domain).to(equal(KPClientErrorDomain))
+                            let message = error!.userInfo?[NSLocalizedDescriptionKey] as? String
+                            expect(message).to(beNil())
+                            done()
+                        }
+                    }                    
+                }
+            })
         }
     }
 }
