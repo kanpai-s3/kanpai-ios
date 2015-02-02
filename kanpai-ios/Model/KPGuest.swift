@@ -10,10 +10,10 @@ import Realm
 
 class KPGuest: RLMObject {
     
-    var id: String = ""
-    var name: String = ""
-    var phoneNumber: String = ""
-    var attendance = false
+    dynamic var id: String = ""
+    dynamic var name: String = ""
+    dynamic var phoneNumber: String = ""
+    dynamic var attendance = false
     
     override init!() {
         super.init()

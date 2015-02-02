@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E09BBDA1A7FCE8D003F60A2 /* UIAlertController-Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E09BBD91A7FCE8D003F60A2 /* UIAlertController-Error.swift */; };
+		2E09BBDC1A7FD5A9003F60A2 /* KPPartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E09BBDB1A7FD5A9003F60A2 /* KPPartyViewController.swift */; };
+		2E09BBDE1A7FDFE7003F60A2 /* KPGuestViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E09BBDD1A7FDFE7003F60A2 /* KPGuestViewCell.swift */; };
+		2E09BBE21A7FE071003F60A2 /* KPGuestViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E09BBE11A7FE071003F60A2 /* KPGuestViewCell.xib */; };
+		2E09BBE41A7FE2D7003F60A2 /* KPGuestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E09BBE31A7FE2D7003F60A2 /* KPGuestListViewController.swift */; };
 		2E1AE21F1A7A2B8200B68786 /* KPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1AE21E1A7A2B8200B68786 /* KPClient.swift */; };
 		2E1AE2221A7A2C1500B68786 /* KPClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1AE2211A7A2C1500B68786 /* KPClientSpec.swift */; };
 		2E1AE2231A7A4CCD00B68786 /* KPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1AE21E1A7A2B8200B68786 /* KPClient.swift */; };
@@ -16,7 +21,17 @@
 		2E3F84721A78E75F00E74F68 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E3F84711A78E75F00E74F68 /* Images.xcassets */; };
 		2E3F84751A78E75F00E74F68 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E3F84731A78E75F00E74F68 /* LaunchScreen.xib */; };
 		2E3F84811A78E75F00E74F68 /* kanpai_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3F84801A78E75F00E74F68 /* kanpai_iosTests.swift */; };
+		2E42A1691A7F310E004931AB /* find_party.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9D5EF81A7CD63400D83481 /* find_party.json */; };
+		2E42A16A1A7F310E004931AB /* internal_server_error.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9D5EF91A7CD63400D83481 /* internal_server_error.json */; };
+		2E42A16B1A7F310E004931AB /* invalid_parameter.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9D5EFA1A7CD63400D83481 /* invalid_parameter.json */; };
+		2E42A16C1A7F310E004931AB /* not_found_guest.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9D5EFB1A7CD63400D83481 /* not_found_guest.json */; };
+		2E42A16D1A7F310E004931AB /* not_found_message.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9D5EFC1A7CD63400D83481 /* not_found_message.json */; };
+		2E42A16E1A7F310E004931AB /* not_found_party.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9D5EFD1A7CD63400D83481 /* not_found_party.json */; };
+		2E42A16F1A7F310E004931AB /* success_to_add_guest.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9D5EFE1A7CD63400D83481 /* success_to_add_guest.json */; };
+		2E42A1701A7F310E004931AB /* success_to_post_party.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9D5EFF1A7CD63400D83481 /* success_to_post_party.json */; };
 		2E59879C1A7E6BBE00AC2A8C /* KPPersonViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E59879B1A7E6BBE00AC2A8C /* KPPersonViewCell.xib */; };
+		2E5BAF601A7F2C6B009A86B4 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BAF5F1A7F2C6B009A86B4 /* Constans.swift */; };
+		2E5BAF611A7F2E6A009A86B4 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BAF5F1A7F2C6B009A86B4 /* Constans.swift */; };
 		2E6039581A7E624D006322D8 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E60394E1A7E624D006322D8 /* Lato-Black.ttf */; };
 		2E6039591A7E624D006322D8 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E60394F1A7E624D006322D8 /* Lato-BlackItalic.ttf */; };
 		2E60395A1A7E624D006322D8 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E6039501A7E624D006322D8 /* Lato-Bold.ttf */; };
@@ -33,10 +48,6 @@
 		2E60396B1A7E6501006322D8 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E60396A1A7E6501006322D8 /* AddressBookUI.framework */; };
 		2E60396E1A7E665A006322D8 /* KPAddressBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60396D1A7E665A006322D8 /* KPAddressBook.swift */; };
 		2E6039721A7E6AD4006322D8 /* KPPersonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6039701A7E6AD4006322D8 /* KPPersonViewCell.swift */; };
-		2E7F11251A7C99E90030A43B /* KPParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7F11241A7C99E90030A43B /* KPParty.swift */; };
-		2E7F11271A7C9BEC0030A43B /* KPGuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7F11261A7C9BEC0030A43B /* KPGuest.swift */; };
-		2E8542091A7CA1FB0038F806 /* KPParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7F11241A7C99E90030A43B /* KPParty.swift */; };
-		2E85420A1A7CA1FE0038F806 /* KPGuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7F11261A7C9BEC0030A43B /* KPGuest.swift */; };
 		2E9D5F001A7CD63400D83481 /* find_party.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9D5EF81A7CD63400D83481 /* find_party.json */; };
 		2E9D5F011A7CD63400D83481 /* internal_server_error.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9D5EF91A7CD63400D83481 /* internal_server_error.json */; };
 		2E9D5F021A7CD63400D83481 /* invalid_parameter.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9D5EFA1A7CD63400D83481 /* invalid_parameter.json */; };
@@ -45,6 +56,10 @@
 		2E9D5F051A7CD63400D83481 /* not_found_party.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9D5EFD1A7CD63400D83481 /* not_found_party.json */; };
 		2E9D5F061A7CD63400D83481 /* success_to_add_guest.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9D5EFE1A7CD63400D83481 /* success_to_add_guest.json */; };
 		2E9D5F071A7CD63400D83481 /* success_to_post_party.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9D5EFF1A7CD63400D83481 /* success_to_post_party.json */; };
+		2EA31A101A7FAA3600FB21A0 /* KPParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA31A0E1A7FAA3600FB21A0 /* KPParty.swift */; };
+		2EA31A111A7FAA3600FB21A0 /* KPGuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA31A0F1A7FAA3600FB21A0 /* KPGuest.swift */; };
+		2ED671D51A7FB15500BFC669 /* KPGuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA31A0F1A7FAA3600FB21A0 /* KPGuest.swift */; };
+		2ED671D61A7FB15800BFC669 /* KPParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA31A0E1A7FAA3600FB21A0 /* KPParty.swift */; };
 		AC9A50FCAE40D2481A76901B /* Pods_kanpai_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74E5D60AD5BE309E2509DFF /* Pods_kanpai_iosTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B4E4250CA9608510357058E5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56AA55E827F33A1046C4CDEF /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -60,6 +75,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E09BBD91A7FCE8D003F60A2 /* UIAlertController-Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController-Error.swift"; sourceTree = "<group>"; };
+		2E09BBDB1A7FD5A9003F60A2 /* KPPartyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KPPartyViewController.swift; sourceTree = "<group>"; };
+		2E09BBDD1A7FDFE7003F60A2 /* KPGuestViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KPGuestViewCell.swift; sourceTree = "<group>"; };
+		2E09BBE11A7FE071003F60A2 /* KPGuestViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPGuestViewCell.xib; sourceTree = "<group>"; };
+		2E09BBE31A7FE2D7003F60A2 /* KPGuestListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KPGuestListViewController.swift; sourceTree = "<group>"; };
 		2E1AE21E1A7A2B8200B68786 /* KPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KPClient.swift; sourceTree = "<group>"; };
 		2E1AE2211A7A2C1500B68786 /* KPClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KPClientSpec.swift; sourceTree = "<group>"; };
 		2E2F3C561A7E37CC00FEDCFA /* KPPartyEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KPPartyEditViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +93,7 @@
 		2E3F847F1A78E75F00E74F68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E3F84801A78E75F00E74F68 /* kanpai_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kanpai_iosTests.swift; sourceTree = "<group>"; };
 		2E59879B1A7E6BBE00AC2A8C /* KPPersonViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPPersonViewCell.xib; sourceTree = "<group>"; };
+		2E5BAF5F1A7F2C6B009A86B4 /* Constans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 		2E60394E1A7E624D006322D8 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
 		2E60394F1A7E624D006322D8 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
 		2E6039501A7E624D006322D8 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
@@ -89,8 +110,6 @@
 		2E60396A1A7E6501006322D8 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		2E60396D1A7E665A006322D8 /* KPAddressBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KPAddressBook.swift; sourceTree = "<group>"; };
 		2E6039701A7E6AD4006322D8 /* KPPersonViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KPPersonViewCell.swift; sourceTree = "<group>"; };
-		2E7F11241A7C99E90030A43B /* KPParty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KPParty.swift; path = Model/KPParty.swift; sourceTree = "<group>"; };
-		2E7F11261A7C9BEC0030A43B /* KPGuest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KPGuest.swift; path = Model/KPGuest.swift; sourceTree = "<group>"; };
 		2E85420B1A7CB1B20038F806 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		2E85420E1A7CB33A0038F806 /* kanpai-ios-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "kanpai-ios-Bridging-Header.h"; sourceTree = "<group>"; };
 		2E9D5EF81A7CD63400D83481 /* find_party.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = find_party.json; sourceTree = "<group>"; };
@@ -101,6 +120,8 @@
 		2E9D5EFD1A7CD63400D83481 /* not_found_party.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = not_found_party.json; sourceTree = "<group>"; };
 		2E9D5EFE1A7CD63400D83481 /* success_to_add_guest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success_to_add_guest.json; sourceTree = "<group>"; };
 		2E9D5EFF1A7CD63400D83481 /* success_to_post_party.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success_to_post_party.json; sourceTree = "<group>"; };
+		2EA31A0E1A7FAA3600FB21A0 /* KPParty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KPParty.swift; path = Model/KPParty.swift; sourceTree = "<group>"; };
+		2EA31A0F1A7FAA3600FB21A0 /* KPGuest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KPGuest.swift; path = Model/KPGuest.swift; sourceTree = "<group>"; };
 		56AA55E827F33A1046C4CDEF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		654C4915EF2CDD8C7ED07293 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6C090538CEC69B9CDC2F46AD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +183,8 @@
 		2E2F3C461A7E2CAC00FEDCFA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2E09BBDB1A7FD5A9003F60A2 /* KPPartyViewController.swift */,
+				2E09BBE31A7FE2D7003F60A2 /* KPGuestListViewController.swift */,
 				2E2F3C561A7E37CC00FEDCFA /* KPPartyEditViewController.swift */,
 				2E6039641A7E62EA006322D8 /* KPPersonPickerViewController.swift */,
 			);
@@ -203,6 +226,8 @@
 				2E3F84731A78E75F00E74F68 /* LaunchScreen.xib */,
 				2E60394B1A7E624D006322D8 /* Resource */,
 				2E3F84681A78E75F00E74F68 /* Supporting Files */,
+				2E5BAF5F1A7F2C6B009A86B4 /* Constans.swift */,
+				2E09BBD91A7FCE8D003F60A2 /* UIAlertController-Error.swift */,
 			);
 			path = "kanpai-ios";
 			sourceTree = "<group>";
@@ -280,6 +305,8 @@
 			children = (
 				2E6039701A7E6AD4006322D8 /* KPPersonViewCell.swift */,
 				2E59879B1A7E6BBE00AC2A8C /* KPPersonViewCell.xib */,
+				2E09BBDD1A7FDFE7003F60A2 /* KPGuestViewCell.swift */,
+				2E09BBE11A7FE071003F60A2 /* KPGuestViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -287,8 +314,8 @@
 		2E7F11231A7C99CC0030A43B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2E7F11241A7C99E90030A43B /* KPParty.swift */,
-				2E7F11261A7C9BEC0030A43B /* KPGuest.swift */,
+				2EA31A0E1A7FAA3600FB21A0 /* KPParty.swift */,
+				2EA31A0F1A7FAA3600FB21A0 /* KPGuest.swift */,
 				2E6039661A7E6392006322D8 /* KPPerson.swift */,
 			);
 			name = Model;
@@ -407,19 +434,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E60395E1A7E624D006322D8 /* Lato-Italic.ttf in Resources */,
+				2E42A16D1A7F310E004931AB /* not_found_message.json in Resources */,
 				2E6039581A7E624D006322D8 /* Lato-Black.ttf in Resources */,
 				2E60395A1A7E624D006322D8 /* Lato-Bold.ttf in Resources */,
 				2E60395F1A7E624D006322D8 /* Lato-Light.ttf in Resources */,
+				2E42A1691A7F310E004931AB /* find_party.json in Resources */,
 				2E3F84701A78E75F00E74F68 /* Main.storyboard in Resources */,
+				2E09BBE21A7FE071003F60A2 /* KPGuestViewCell.xib in Resources */,
+				2E42A16F1A7F310E004931AB /* success_to_add_guest.json in Resources */,
 				2E6039591A7E624D006322D8 /* Lato-BlackItalic.ttf in Resources */,
+				2E42A16B1A7F310E004931AB /* invalid_parameter.json in Resources */,
 				2E3F84751A78E75F00E74F68 /* LaunchScreen.xib in Resources */,
 				2E6039601A7E624D006322D8 /* Lato-LightItalic.ttf in Resources */,
 				2E60395D1A7E624D006322D8 /* Lato-HairlineItalic.ttf in Resources */,
 				2E60395B1A7E624D006322D8 /* Lato-BoldItalic.ttf in Resources */,
 				2E59879C1A7E6BBE00AC2A8C /* KPPersonViewCell.xib in Resources */,
+				2E42A16C1A7F310E004931AB /* not_found_guest.json in Resources */,
 				2E6039611A7E624D006322D8 /* Lato-Regular.ttf in Resources */,
 				2E60395C1A7E624D006322D8 /* Lato-Hairline.ttf in Resources */,
+				2E42A16A1A7F310E004931AB /* internal_server_error.json in Resources */,
 				2E3F84721A78E75F00E74F68 /* Images.xcassets in Resources */,
+				2E42A16E1A7F310E004931AB /* not_found_party.json in Resources */,
+				2E42A1701A7F310E004931AB /* success_to_post_party.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,15 +574,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E7F11271A7C9BEC0030A43B /* KPGuest.swift in Sources */,
 				2E1AE21F1A7A2B8200B68786 /* KPClient.swift in Sources */,
+				2E5BAF601A7F2C6B009A86B4 /* Constans.swift in Sources */,
 				2E60396E1A7E665A006322D8 /* KPAddressBook.swift in Sources */,
+				2EA31A101A7FAA3600FB21A0 /* KPParty.swift in Sources */,
+				2E09BBE41A7FE2D7003F60A2 /* KPGuestListViewController.swift in Sources */,
 				2E3F846B1A78E75F00E74F68 /* AppDelegate.swift in Sources */,
-				2E7F11251A7C99E90030A43B /* KPParty.swift in Sources */,
+				2EA31A111A7FAA3600FB21A0 /* KPGuest.swift in Sources */,
 				2E6039721A7E6AD4006322D8 /* KPPersonViewCell.swift in Sources */,
+				2E09BBDE1A7FDFE7003F60A2 /* KPGuestViewCell.swift in Sources */,
 				2E6039651A7E62EA006322D8 /* KPPersonPickerViewController.swift in Sources */,
+				2E09BBDC1A7FD5A9003F60A2 /* KPPartyViewController.swift in Sources */,
 				2E2F3C571A7E37CC00FEDCFA /* KPPartyEditViewController.swift in Sources */,
 				2E6039671A7E6392006322D8 /* KPPerson.swift in Sources */,
+				2E09BBDA1A7FCE8D003F60A2 /* UIAlertController-Error.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,11 +595,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E85420A1A7CA1FE0038F806 /* KPGuest.swift in Sources */,
+				2ED671D51A7FB15500BFC669 /* KPGuest.swift in Sources */,
 				2E3F84811A78E75F00E74F68 /* kanpai_iosTests.swift in Sources */,
+				2E5BAF611A7F2E6A009A86B4 /* Constans.swift in Sources */,
 				2E1AE2231A7A4CCD00B68786 /* KPClient.swift in Sources */,
 				2E1AE2221A7A2C1500B68786 /* KPClientSpec.swift in Sources */,
-				2E8542091A7CA1FB0038F806 /* KPParty.swift in Sources */,
+				2ED671D61A7FB15800BFC669 /* KPParty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,6 +671,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "\"-D DEBUG\"";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -664,7 +707,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_SWIFT_FLAGS = "\"-D DEBUG\"";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -676,6 +721,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "kanpai-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "\"-D COCOAPODS\" -DDEBUG";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "kanpai-ios-Bridging-Header.h";
 			};
@@ -688,6 +734,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "kanpai-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "\"-D COCOAPODS\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "kanpai-ios-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";

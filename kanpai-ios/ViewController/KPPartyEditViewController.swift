@@ -57,13 +57,12 @@ class KPPartyEditViewController: UITableViewController, KPPersonPickerViewContro
                 self.presentViewController(UIAlertController(error: error!), animated: true, completion: nil)
                 return
             }
-            
             party.invite(guests) { [unowned self] (error) in
                 if error != nil {
                     self.presentViewController(UIAlertController(error: error!), animated: true, completion: nil)
                     return
                 }
-                
+                self.dismissViewControllerAnimated(true, completion: nil)
             }
         }
     }

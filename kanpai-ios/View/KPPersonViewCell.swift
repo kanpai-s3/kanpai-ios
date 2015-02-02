@@ -2,7 +2,6 @@
 //  KPPersonViewCell.swift
 //  kanpai-ios
 //
-//  Created by Noda Shimpei on 2015/02/01.
 //  Copyright (c) 2015年 kanpai. All rights reserved.
 //
 
