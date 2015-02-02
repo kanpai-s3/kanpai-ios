@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6724" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KPPersonViewCell" customModule="kanpai_ios" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="KGk-i7-Jjw" customClass="KPPersonViewCell" customModule="kanpai_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-checkbox-unselected-25x25" translatesAutoresizingMaskIntoConstraints="NO" id="HN3-O0-pyo">
+                        <rect key="frame" x="8" y="19" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="MzF-c3-uka"/>
+                            <constraint firstAttribute="width" constant="25" id="OjP-9w-KBi"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-avatar-60x60" translatesAutoresizingMaskIntoConstraints="NO" id="3HM-6l-86Z">
+                        <rect key="frame" x="41" y="11" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="2H2-x0-hEg"/>
+                            <constraint firstAttribute="height" constant="40" id="zz5-6f-DKM"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirstName LastName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRk-rm-fe0">
+                        <rect key="frame" x="89" y="19" width="198" height="21"/>
+                        <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerY" secondItem="3HM-6l-86Z" secondAttribute="centerY" constant="-1" id="AYJ-nX-Qqn"/>
+                    <constraint firstItem="3HM-6l-86Z" firstAttribute="leading" secondItem="HN3-O0-pyo" secondAttribute="trailing" constant="8" id="JsP-gR-ilV"/>
+                    <constraint firstItem="HN3-O0-pyo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="h2B-R4-dIL"/>
+                    <constraint firstItem="jRk-rm-fe0" firstAttribute="leading" secondItem="3HM-6l-86Z" secondAttribute="trailing" constant="8" id="qOZ-XF-wjy"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="jRk-rm-fe0" secondAttribute="trailing" constant="25" id="slw-mI-w13"/>
+                    <constraint firstAttribute="centerY" secondItem="HN3-O0-pyo" secondAttribute="centerY" constant="-1.5" id="tdV-n4-Z4t"/>
+                    <constraint firstAttribute="centerY" secondItem="jRk-rm-fe0" secondAttribute="centerY" id="zOV-AA-tDk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="checkBox" destination="HN3-O0-pyo" id="cK9-hS-hof"/>
+                <outlet property="nameLabel" destination="jRk-rm-fe0" id="ARr-zG-vpv"/>
+                <outlet property="thumbnail" destination="3HM-6l-86Z" id="9W7-61-X4T"/>
+            </connections>
+            <point key="canvasLocation" x="333" y="223"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon-avatar-60x60" width="60" height="60"/>
+        <image name="icon-checkbox-unselected-25x25" width="25" height="25"/>
+    </resources>
+</document>

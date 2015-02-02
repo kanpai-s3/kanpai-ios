@@ -44,7 +44,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="40" id="kd6-hH-zQc">
+                                    <tableViewCell tag="1" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="40" id="kd6-hH-zQc">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kd6-hH-zQc" id="kBB-N3-YG3">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -72,7 +72,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="182" id="2VA-UG-9ZU">
+                                    <tableViewCell tag="2" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="182" id="2VA-UG-9ZU">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2VA-UG-9ZU" id="eVj-QE-bBZ">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -95,7 +95,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="QJf-1l-YRO" rowHeight="40" style="IBUITableViewCellStyleDefault" id="Cr0-nv-OIN">
+                                    <tableViewCell tag="3" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="QJf-1l-YRO" rowHeight="40" style="IBUITableViewCellStyleDefault" id="Cr0-nv-OIN">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cr0-nv-OIN" id="Lkr-tX-shx">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -108,7 +108,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="234" id="Ay1-8y-nlh">
+                                    <tableViewCell tag="4" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="234" id="Ay1-8y-nlh">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ay1-8y-nlh" id="q7b-Wi-BaX">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -144,6 +144,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="beginAtLabel" destination="yJg-4k-Xcr" id="EKN-KI-Q59"/>
+                        <outlet property="dataPicker" destination="mvS-QP-VX6" id="EGz-Ru-Ufq"/>
+                        <outlet property="locationField" destination="Ifu-63-iGd" id="BZN-M6-2hH"/>
+                        <outlet property="messageField" destination="USs-BB-Rne" id="k3j-gd-yBj"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T4f-jI-STx" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -16,6 +16,7 @@
 		2E3F84721A78E75F00E74F68 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E3F84711A78E75F00E74F68 /* Images.xcassets */; };
 		2E3F84751A78E75F00E74F68 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E3F84731A78E75F00E74F68 /* LaunchScreen.xib */; };
 		2E3F84811A78E75F00E74F68 /* kanpai_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3F84801A78E75F00E74F68 /* kanpai_iosTests.swift */; };
+		2E59879C1A7E6BBE00AC2A8C /* KPPersonViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E59879B1A7E6BBE00AC2A8C /* KPPersonViewCell.xib */; };
 		2E6039581A7E624D006322D8 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E60394E1A7E624D006322D8 /* Lato-Black.ttf */; };
 		2E6039591A7E624D006322D8 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E60394F1A7E624D006322D8 /* Lato-BlackItalic.ttf */; };
 		2E60395A1A7E624D006322D8 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E6039501A7E624D006322D8 /* Lato-Bold.ttf */; };
@@ -26,6 +27,12 @@
 		2E60395F1A7E624D006322D8 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E6039551A7E624D006322D8 /* Lato-Light.ttf */; };
 		2E6039601A7E624D006322D8 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E6039561A7E624D006322D8 /* Lato-LightItalic.ttf */; };
 		2E6039611A7E624D006322D8 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E6039571A7E624D006322D8 /* Lato-Regular.ttf */; };
+		2E6039651A7E62EA006322D8 /* KPPersonPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6039641A7E62EA006322D8 /* KPPersonPickerViewController.swift */; };
+		2E6039671A7E6392006322D8 /* KPPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6039661A7E6392006322D8 /* KPPerson.swift */; };
+		2E6039691A7E63CB006322D8 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E6039681A7E63CB006322D8 /* AddressBook.framework */; };
+		2E60396B1A7E6501006322D8 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E60396A1A7E6501006322D8 /* AddressBookUI.framework */; };
+		2E60396E1A7E665A006322D8 /* KPAddressBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E60396D1A7E665A006322D8 /* KPAddressBook.swift */; };
+		2E6039721A7E6AD4006322D8 /* KPPersonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6039701A7E6AD4006322D8 /* KPPersonViewCell.swift */; };
 		2E7F11251A7C99E90030A43B /* KPParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7F11241A7C99E90030A43B /* KPParty.swift */; };
 		2E7F11271A7C9BEC0030A43B /* KPGuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7F11261A7C9BEC0030A43B /* KPGuest.swift */; };
 		2E8542091A7CA1FB0038F806 /* KPParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7F11241A7C99E90030A43B /* KPParty.swift */; };
@@ -65,6 +72,7 @@
 		2E3F847A1A78E75F00E74F68 /* kanpai-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kanpai-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E3F847F1A78E75F00E74F68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E3F84801A78E75F00E74F68 /* kanpai_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kanpai_iosTests.swift; sourceTree = "<group>"; };
+		2E59879B1A7E6BBE00AC2A8C /* KPPersonViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KPPersonViewCell.xib; sourceTree = "<group>"; };
 		2E60394E1A7E624D006322D8 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
 		2E60394F1A7E624D006322D8 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
 		2E6039501A7E624D006322D8 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
@@ -75,6 +83,12 @@
 		2E6039551A7E624D006322D8 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		2E6039561A7E624D006322D8 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		2E6039571A7E624D006322D8 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		2E6039641A7E62EA006322D8 /* KPPersonPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KPPersonPickerViewController.swift; sourceTree = "<group>"; };
+		2E6039661A7E6392006322D8 /* KPPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KPPerson.swift; path = Model/KPPerson.swift; sourceTree = "<group>"; };
+		2E6039681A7E63CB006322D8 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		2E60396A1A7E6501006322D8 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		2E60396D1A7E665A006322D8 /* KPAddressBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KPAddressBook.swift; sourceTree = "<group>"; };
+		2E6039701A7E6AD4006322D8 /* KPPersonViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KPPersonViewCell.swift; sourceTree = "<group>"; };
 		2E7F11241A7C99E90030A43B /* KPParty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KPParty.swift; path = Model/KPParty.swift; sourceTree = "<group>"; };
 		2E7F11261A7C9BEC0030A43B /* KPGuest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KPGuest.swift; path = Model/KPGuest.swift; sourceTree = "<group>"; };
 		2E85420B1A7CB1B20038F806 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
@@ -100,6 +114,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E60396B1A7E6501006322D8 /* AddressBookUI.framework in Frameworks */,
+				2E6039691A7E63CB006322D8 /* AddressBook.framework in Frameworks */,
 				B4E4250CA9608510357058E5 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,6 +134,8 @@
 		2C95529BEB263AB41F9B4435 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2E60396A1A7E6501006322D8 /* AddressBookUI.framework */,
+				2E6039681A7E63CB006322D8 /* AddressBook.framework */,
 				2E85420B1A7CB1B20038F806 /* libc++.dylib */,
 				D74E5D60AD5BE309E2509DFF /* Pods_kanpai_iosTests.framework */,
 				56AA55E827F33A1046C4CDEF /* Pods.framework */,
@@ -145,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				2E2F3C561A7E37CC00FEDCFA /* KPPartyEditViewController.swift */,
+				2E6039641A7E62EA006322D8 /* KPPersonPickerViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -173,8 +192,10 @@
 		2E3F84671A78E75F00E74F68 /* kanpai-ios */ = {
 			isa = PBXGroup;
 			children = (
+				2E60396F1A7E6AA8006322D8 /* View */,
 				2E2F3C461A7E2CAC00FEDCFA /* ViewController */,
 				2E7F11231A7C99CC0030A43B /* Model */,
+				2E60396C1A7E6645006322D8 /* Store */,
 				2E1AE2131A7A2B3C00B68786 /* Client */,
 				2E3F846A1A78E75F00E74F68 /* AppDelegate.swift */,
 				2E3F846E1A78E75F00E74F68 /* Main.storyboard */,
@@ -246,11 +267,29 @@
 			path = Lato;
 			sourceTree = "<group>";
 		};
+		2E60396C1A7E6645006322D8 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				2E60396D1A7E665A006322D8 /* KPAddressBook.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		2E60396F1A7E6AA8006322D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2E6039701A7E6AD4006322D8 /* KPPersonViewCell.swift */,
+				2E59879B1A7E6BBE00AC2A8C /* KPPersonViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2E7F11231A7C99CC0030A43B /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				2E7F11241A7C99E90030A43B /* KPParty.swift */,
 				2E7F11261A7C9BEC0030A43B /* KPGuest.swift */,
+				2E6039661A7E6392006322D8 /* KPPerson.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -377,6 +416,7 @@
 				2E6039601A7E624D006322D8 /* Lato-LightItalic.ttf in Resources */,
 				2E60395D1A7E624D006322D8 /* Lato-HairlineItalic.ttf in Resources */,
 				2E60395B1A7E624D006322D8 /* Lato-BoldItalic.ttf in Resources */,
+				2E59879C1A7E6BBE00AC2A8C /* KPPersonViewCell.xib in Resources */,
 				2E6039611A7E624D006322D8 /* Lato-Regular.ttf in Resources */,
 				2E60395C1A7E624D006322D8 /* Lato-Hairline.ttf in Resources */,
 				2E3F84721A78E75F00E74F68 /* Images.xcassets in Resources */,
@@ -500,9 +540,13 @@
 			files = (
 				2E7F11271A7C9BEC0030A43B /* KPGuest.swift in Sources */,
 				2E1AE21F1A7A2B8200B68786 /* KPClient.swift in Sources */,
+				2E60396E1A7E665A006322D8 /* KPAddressBook.swift in Sources */,
 				2E3F846B1A78E75F00E74F68 /* AppDelegate.swift in Sources */,
 				2E7F11251A7C99E90030A43B /* KPParty.swift in Sources */,
+				2E6039721A7E6AD4006322D8 /* KPPersonViewCell.swift in Sources */,
+				2E6039651A7E62EA006322D8 /* KPPersonPickerViewController.swift in Sources */,
 				2E2F3C571A7E37CC00FEDCFA /* KPPartyEditViewController.swift in Sources */,
+				2E6039671A7E6392006322D8 /* KPPerson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
