@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Realm
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+
+#if DEBUG
+        let realm = RLMRealm.defaultRealm()
+        realm.beginWriteTransaction()
+        realm.deleteAllObjects()
+        realm.commitWriteTransaction()
+#endif
+
+        println("parties in db: \(KPParty.allObjects())")
+        
         // Override point for customization after application launch.
         return true
     }

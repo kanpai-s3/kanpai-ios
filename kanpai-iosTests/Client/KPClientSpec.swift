@@ -170,7 +170,7 @@ class KPClientSpec: QuickSpec {
                 }
                 
                 it("should success to add guest to party and return guest contained id") {
-                    stubResponse("/parties/\(party.id!)/guests", "success_to_add_guest.json")
+                    stubResponse("/parties/\(party.id)/guests", "success_to_add_guest.json")
                     
                     waitUntil { done in
                         client.addGuest(guest, to: party) { (error, gt) in
@@ -185,7 +185,7 @@ class KPClientSpec: QuickSpec {
                 }
                 
                 it("should throw fatal error becase party dosen't have id") {
-                    party.id = nil
+                    party.id = ""
                     expect {
                         client.addGuest(guest, to: party) { (error, json) in
                         }
@@ -193,7 +193,7 @@ class KPClientSpec: QuickSpec {
                 }
                 
                 it("should return error for invalid parameter") {
-                    stubResponseWithStatusCode("/parties/\(party.id!)/guests", "invalid_parameter.json", 400)
+                    stubResponseWithStatusCode("/parties/\(party.id)/guests", "invalid_parameter.json", 400)
                     
                     waitUntil { done in
                         client.addGuest(guest, to: party) { (error, gt) in
@@ -208,7 +208,7 @@ class KPClientSpec: QuickSpec {
                 }
                 
                 it("should return error for internal server error") {
-                    stubResponseWithStatusCode("/parties/\(party.id!)/guests", "internal_server_error.json", 400)
+                    stubResponseWithStatusCode("/parties/\(party.id)/guests", "internal_server_error.json", 400)
                     
                     waitUntil { done in
                         client.addGuest(guest, to: party) { (error, gt) in
@@ -223,7 +223,7 @@ class KPClientSpec: QuickSpec {
                 }
                 
                 it("should return error for unkown error") {
-                    stubResponseWithStatusCode("/parties/\(party.id!)/guests", nil, 500)
+                    stubResponseWithStatusCode("/parties/\(party.id)/guests", nil, 500)
                     
                     waitUntil { done in
                         client.addGuest(guest, to: party) { (error, gt) in
@@ -235,7 +235,7 @@ class KPClientSpec: QuickSpec {
                         }
                     }
 
-                    stubResponseWithStatusCode("/parties/\(party.id!)/guests", nil, 200)
+                    stubResponseWithStatusCode("/parties/\(party.id)/guests", nil, 200)
                     
                     waitUntil { done in
                         client.addGuest(guest, to: party) { (error, gt) in
@@ -258,7 +258,7 @@ class KPClientSpec: QuickSpec {
                 }
                 
                 it("should success to update guest") {
-                    stubResponse("/guests/\(guest.id!)", nil)
+                    stubResponse("/guests/\(guest.id)", nil)
                     
                     waitUntil { done in
                         client.updateGuest(guest) { (error) in
@@ -269,7 +269,7 @@ class KPClientSpec: QuickSpec {
                 }
                 
                 it("should throw fatal error becase guest dosen't have id") {
-                    guest.id = nil
+                    guest.id = ""
                     expect {
                         client.updateGuest(guest) { (error) in
                         }
@@ -277,7 +277,7 @@ class KPClientSpec: QuickSpec {
                 }
                 
                 it("should return error for invalid parameter") {
-                    stubResponseWithStatusCode("/guests/\(guest.id!)", "invalid_parameter.json", 400)
+                    stubResponseWithStatusCode("/guests/\(guest.id)", "invalid_parameter.json", 400)
                     
                     waitUntil { done in
                         client.updateGuest(guest) { (error) in
@@ -292,7 +292,7 @@ class KPClientSpec: QuickSpec {
                 }
                 
                 it("should return error for internal server error") {
-                    stubResponseWithStatusCode("/guests/\(guest.id!)", "internal_server_error.json", 400)
+                    stubResponseWithStatusCode("/guests/\(guest.id)", "internal_server_error.json", 400)
                     
                     waitUntil { done in
                         client.updateGuest(guest) { (error) in
@@ -307,7 +307,7 @@ class KPClientSpec: QuickSpec {
                 }
                 
                 it("should return error for unkown error") {
-                    stubResponseWithStatusCode("/guests/\(guest.id!)", nil, 400)
+                    stubResponseWithStatusCode("/guests/\(guest.id)", nil, 400)
                     
                     waitUntil { done in
                         client.updateGuest(guest) { (error) in

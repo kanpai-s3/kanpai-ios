@@ -9,10 +9,30 @@ import UIKit
 import Foundation
 import Alamofire
 import SwiftyJSON
+#if DEBUG
+import AeroGearHttpStub
+#endif
 
 let KPClientErrorDomain = "com.kanpai.ios.error"
 
 class KPClient {
+    
+#if DEBUG
+    func stubResponse(path: String, _ responseFileName: String?, _ statusCode: Int) {
+        let headers = ["Content-Type": "application/json"]
+        
+        StubsManager.stubRequestsPassingTest({ (req) -> Bool in
+            return req.URL.path == path
+            }, withStubResponse: { (req) -> StubResponse in
+                if let fileName = responseFileName {
+                    let bundle = NSBundle.mainBundle()
+                    return StubResponse(filename: fileName, location: StubResponse.Location.Bundle(bundle), statusCode: statusCode, headers: headers)
+                } else {
+                    return StubResponse(data: NSData(), statusCode: statusCode, headers: headers)
+                }
+        })
+    }
+#endif
     
     let baseURL: String
     
@@ -54,17 +74,20 @@ class KPClient {
     }
     
     func postParty(party: KPParty, callback: (NSError?, KPParty) -> Void) {
+#if DEBUG
+        stubResponse("/parties", "success_to_post_party.json", 200)
+#endif
         var params = [
             "owner": party.owner,
             "begin_at": party.ISO8601StringForBeginAt()
         ]
         
-        if let loc = party.location {
-            params["location"] = loc
+        if !party.location.isEmpty {
+            params["location"] = party.location
         }
         
-        if let msg = party.message {
-            params["message"] = msg
+        if !party.message.isEmpty {
+            params["message"] = party.message
         }
         
         self.request(.POST, "/parties", params: params) { (error, json) in
@@ -77,12 +100,18 @@ class KPClient {
             }
             
             party.id = json["id"].string!
-            callback(error, party)
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                callback(error, party)
+            }
         }
     }
     
     func addGuest(guest: KPGuest, to party: KPParty, callback: (NSError?, KPGuest) -> Void) {
-        if party.id == nil {
+#if DEBUG
+        stubResponse("/parties/\(party.id)/guests", "success_to_add_guest.json", 200)
+#endif
+        if party.id.isEmpty {
             NSException(name: KPClientErrorDomain, reason: "need a party id to add guest", userInfo: nil).raise()
             return
         }
@@ -92,7 +121,7 @@ class KPClient {
             "phone_number": guest.phoneNumber
         ]
 
-        self.request(.POST, "/parties/\(party.id!)/guests", params: params) { (error, json) in
+        self.request(.POST, "/parties/\(party.id)/guests", params: params) { (error, json) in
             if error != nil {
                 return callback(error, guest)
             }
@@ -107,7 +136,7 @@ class KPClient {
     }
     
     func updateGuest(guest: KPGuest, callback: (NSError?) -> Void) {
-        if guest.id == nil {
+        if guest.id.isEmpty {
             NSException(name: KPClientErrorDomain, reason: "need a guest id to update guest", userInfo: nil).raise()
             return
         }
@@ -116,7 +145,7 @@ class KPClient {
             "attendance": guest.attendance
         ]
         
-        self.request(.PUT, "/guests/\(guest.id!)", params: params) { (error, json) in
+        self.request(.PUT, "/guests/\(guest.id)", params: params) { (error, json) in
             callback(error)
         }
     }

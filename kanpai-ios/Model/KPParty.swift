@@ -9,12 +9,16 @@ import UIKit
 import Realm
 
 class KPParty: RLMObject {
-   
-    dynamic var id: String?
-    dynamic let owner: String = ""
-    dynamic let beginAt: NSDate = NSDate()
-    dynamic var location: String?
-    dynamic var message: String?
+    
+    dynamic var id: String = ""
+    dynamic var owner: String = ""
+    dynamic var beginAt: NSDate = NSDate()
+    dynamic var location: String = ""
+    dynamic var message: String = ""
+    
+    dynamic var guests = RLMArray(objectClassName: KPGuest.className())
+    
+    private var guestsWaitingInvite = [KPGuest]()
     
     override init!() {
         super.init()
@@ -32,10 +36,16 @@ class KPParty: RLMObject {
         super.init(objectSchema: schema)
     }
     
-    init(owner: String, beginAt: NSDate) {
-        self.owner = owner
-        self.beginAt = beginAt
-
+    convenience init(owner: String, beginAt: NSDate) {
+        self.init(owner: owner, beginAt: beginAt, location: "", message: "")
+    }
+    
+    init(owner: String, beginAt: NSDate, location: String, message: String) {
+        self.owner    = owner
+        self.beginAt  = beginAt
+        self.location = location
+        self.message  = message
+        
         super.init()
     }
     
@@ -45,4 +55,62 @@ class KPParty: RLMObject {
         return formatter.stringFromDate(self.beginAt)
     }
     
+    func hold(callback: (NSError?) -> Void) {
+        if !self.id.isEmpty {
+            callback(nil)
+            return
+        }
+        
+        let client = KPClient(baseURL: Constans.BaseURL)
+        client.postParty(self) { (error, p) in
+            if error != nil {
+                callback(error)
+                return
+            }
+            
+            self.id = p.id
+            
+            let realm = RLMRealm.defaultRealm()
+            realm.beginWriteTransaction()
+            realm.addObject(self)
+            realm.commitWriteTransaction()
+            callback(nil)
+        }
+    }
+    
+    func invite(inviteGuests: [KPGuest], callback: (NSError?) -> Void) {
+        self.guestsWaitingInvite += inviteGuests
+        
+        if self.id.isEmpty {
+            return
+        }
+        
+        self.p_invite(callback)
+    }
+    
+    private func p_invite(callback: (NSError?) -> Void) {
+        if self.guestsWaitingInvite.isEmpty {
+            callback(nil)
+            return
+        }
+        
+        let inviteGuest = self.guestsWaitingInvite.removeLast()
+        
+        let client = KPClient(baseURL: Constans.BaseURL)
+        client.addGuest(inviteGuest, to: self) { (error, g) in
+            if error != nil {
+                callback(error)
+                return
+            }
+            
+            inviteGuest.id = g.id
+            
+            let realm = RLMRealm.defaultRealm()
+            realm.beginWriteTransaction()
+            realm.addObject(inviteGuest)
+            self.guests.addObject(inviteGuest)
+            realm.commitWriteTransaction()
+            self.p_invite(callback)
+        }
+    }    
 }

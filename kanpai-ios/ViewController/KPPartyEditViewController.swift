@@ -20,7 +20,7 @@ class KPPartyEditViewController: UITableViewController, KPPersonPickerViewContro
     @IBOutlet var dataPicker: UIDatePicker?
     @IBOutlet var messageField: UITextView?
     
-    var guests = [KPPerson]()
+    var persons = [KPPerson]()
     
     override func viewDidLoad() {
         let now = NSDate()
@@ -37,14 +37,35 @@ class KPPartyEditViewController: UITableViewController, KPPersonPickerViewContro
     }
     
     @IBAction func doneEdit(sender: AnyObject) {
-        let owner    = ""
-        let location = self.locationField?.text
-        let beginAt  = self.dataPicker?.date
-        let guests   = self.guests
-        let message  = self.messageField?.text
+        let owner    = "noda"
+        let location = self.locationField?.text ?? ""
+        let beginAt  = self.dataPicker?.date ?? NSDate()
+        let guests   = self.persons.map { (person) -> KPGuest in
+            return KPGuest(name: person.name, phoneNumber: person.tel!)
+        }
+        let message  = self.messageField?.text ?? ""
+        
+        let party = KPParty(
+            owner: owner,
+            beginAt: beginAt,
+            location: location,
+            message: message
+        )
 
-        // let party = KPParty(name: <#String#>, beginAt: <#NSDate#>)
-        // TODO: post party to server
+        party.hold { [unowned self] (error) in
+            if error != nil {
+                self.presentViewController(UIAlertController(error: error!), animated: true, completion: nil)
+                return
+            }
+            
+            party.invite(guests) { [unowned self] (error) in
+                if error != nil {
+                    self.presentViewController(UIAlertController(error: error!), animated: true, completion: nil)
+                    return
+                }
+                
+            }
+        }
     }
     
     private func dateStringFor(date: NSDate) -> String {
@@ -60,7 +81,7 @@ class KPPartyEditViewController: UITableViewController, KPPersonPickerViewContro
         case GuestCell:
             let personPicker = KPPersonPickerViewController()
             personPicker.personPickerDelegate = self
-            personPicker.selectedPersons = self.guests
+            personPicker.selectedPersons = self.persons
             let navigationController = UINavigationController(rootViewController: personPicker)
             self.presentViewController(navigationController, animated: true, completion: nil)
         default:
@@ -71,7 +92,7 @@ class KPPartyEditViewController: UITableViewController, KPPersonPickerViewContro
     // MARK: - Person picker view delegate
     
     func personPickerViewController(personPickerViewController: KPPersonPickerViewController, didSelectedPersons persons: [KPPerson]) {
-        self.guests = persons
+        self.persons = persons
     }
     
     func personPickerViewControllerDidCancel(personPickerViewController: KPPersonPickerViewController) {

@@ -9,10 +9,10 @@ import UIKit
 import Realm
 
 class KPGuest: RLMObject {
-   
-    var id: String?
-    let name: String = ""
-    let phoneNumber: String = ""
+    
+    var id: String = ""
+    var name: String = ""
+    var phoneNumber: String = ""
     var attendance = false
     
     override init!() {

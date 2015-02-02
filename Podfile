@@ -6,10 +6,10 @@ pod 'SZTextView'
 pod 'Alamofire'
 pod 'SwiftyJSON'
 pod 'Realm'
+pod 'AeroGearHttpStub'
 
 target 'kanpai-iosTests' do
   pod 'Nimble'
   pod 'Quick'
-  pod 'AeroGearHttpStub'
 end
 
