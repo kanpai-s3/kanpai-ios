@@ -55,7 +55,7 @@ class KPClient {
     
     func postParty(party: KPParty, callback: (NSError?, KPParty) -> Void) {
         var params = [
-            "owner": party.name,
+            "owner": party.owner,
             "begin_at": party.ISO8601StringForBeginAt()
         ]
         

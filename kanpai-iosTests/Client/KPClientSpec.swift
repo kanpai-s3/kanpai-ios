@@ -47,7 +47,7 @@ class KPClientSpec: QuickSpec {
                     stubResponse("/parties", "success_to_post_party.json")
                     
                     waitUntil { done in
-                        let party = KPParty(name: "party", beginAt: NSDate())
+                        let party = KPParty(owner: "party", beginAt: NSDate())
                         client.postParty(party) { (error, pt) in
                             expect(error).to(beNil())
                             expect(pt).notTo(beNil())
@@ -59,7 +59,7 @@ class KPClientSpec: QuickSpec {
                     }
                     
                     waitUntil { done in
-                        let party = KPParty(name: "party", beginAt: NSDate())
+                        let party = KPParty(owner: "party", beginAt: NSDate())
                         party.location = "yokohama"
                         client.postParty(party) { (error, pt) in
                             expect(error).to(beNil())
@@ -72,7 +72,7 @@ class KPClientSpec: QuickSpec {
                     }
 
                     waitUntil { done in
-                        let party = KPParty(name: "party", beginAt: NSDate())
+                        let party = KPParty(owner: "party", beginAt: NSDate())
                         party.message = "hello"
                         client.postParty(party) { (error, pt) in
                             expect(error).to(beNil())
@@ -85,7 +85,7 @@ class KPClientSpec: QuickSpec {
                     }
                     
                     waitUntil { done in
-                        let party = KPParty(name: "party", beginAt: NSDate())
+                        let party = KPParty(owner: "party", beginAt: NSDate())
                         party.location = "yokohama"
                         party.message = "hello"
                         client.postParty(party) { (error, pt) in
@@ -103,7 +103,7 @@ class KPClientSpec: QuickSpec {
                     stubResponseWithStatusCode("/parties", "invalid_parameter.json", 400)
                     
                     waitUntil { done in
-                        let party = KPParty(name: "party", beginAt: NSDate())
+                        let party = KPParty(owner: "party", beginAt: NSDate())
                         client.postParty(party) { (error, pt) in
                             expect(error).notTo(beNil())
                             expect(error!.domain).to(equal(KPClientErrorDomain))
@@ -119,7 +119,7 @@ class KPClientSpec: QuickSpec {
                     stubResponseWithStatusCode("/parties", "internal_server_error.json", 500)
                     
                     waitUntil { done in
-                        let party = KPParty(name: "party", beginAt: NSDate())
+                        let party = KPParty(owner: "party", beginAt: NSDate())
                         client.postParty(party) { (error, pt) in
                             expect(error).notTo(beNil())
                             expect(error!.domain).to(equal(KPClientErrorDomain))
@@ -135,7 +135,7 @@ class KPClientSpec: QuickSpec {
                     stubResponseWithStatusCode("/parties", nil, 500)
                     
                     waitUntil { done in
-                        let party = KPParty(name: "party", beginAt: NSDate())
+                        let party = KPParty(owner: "party", beginAt: NSDate())
                         client.postParty(party) { (error, pt) in
                             expect(error).notTo(beNil())
                             expect(error!.domain).to(equal(KPClientErrorDomain))
@@ -148,7 +148,7 @@ class KPClientSpec: QuickSpec {
                     stubResponseWithStatusCode("/parties", nil, 200)
                     
                     waitUntil { done in
-                        let party = KPParty(name: "party", beginAt: NSDate())
+                        let party = KPParty(owner: "party", beginAt: NSDate())
                         client.postParty(party) { (error, pt) in
                             expect(error).notTo(beNil())
                             expect(error!.domain).to(equal(KPClientErrorDomain))
@@ -162,7 +162,7 @@ class KPClientSpec: QuickSpec {
             
             describe("# addGuest()", {
                 let client = KPClient(baseURL: "http://example.com")
-                let party  = KPParty(name: "party", beginAt: NSDate())
+                let party  = KPParty(owner: "party", beginAt: NSDate())
                 let guest = KPGuest(name: "noda", phoneNumber: "08099999999")
                 
                 beforeEach {

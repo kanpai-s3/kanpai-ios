@@ -11,7 +11,7 @@ import Realm
 class KPParty: RLMObject {
    
     dynamic var id: String?
-    dynamic let name: String = ""
+    dynamic let owner: String = ""
     dynamic let beginAt: NSDate = NSDate()
     dynamic var location: String?
     dynamic var message: String?
@@ -32,8 +32,8 @@ class KPParty: RLMObject {
         super.init(objectSchema: schema)
     }
     
-    init(name: String, beginAt: NSDate) {
-        self.name = name
+    init(owner: String, beginAt: NSDate) {
+        self.owner = owner
         self.beginAt = beginAt
 
         super.init()
