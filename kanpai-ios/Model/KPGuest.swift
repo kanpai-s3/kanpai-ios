@@ -8,7 +8,7 @@
 import UIKit
 import Realm
 
-class KPGuest: RLMObject {
+class KPGuest: RLMObject, Printable {
     
     dynamic var id: String = ""
     dynamic var name: String = ""
@@ -32,9 +32,13 @@ class KPGuest: RLMObject {
     }
     
     init(name: String, phoneNumber: String) {
+        super.init()
+        
         self.name = name
         self.phoneNumber = phoneNumber
-        
-        super.init()
+    }
+    
+    override var description: String {
+        return "( name: \(self.name), phoneNumber: \(self.phoneNumber). attendance: \(self.attendance) )"
     }
 }

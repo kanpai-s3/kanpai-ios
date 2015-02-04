@@ -41,12 +41,16 @@ class KPParty: RLMObject {
     }
     
     init(owner: String, beginAt: NSDate, location: String, message: String) {
+        super.init()
+        
         self.owner    = owner
         self.beginAt  = beginAt
         self.location = location
         self.message  = message
-        
-        super.init()
+    }
+    
+    override var description: String {
+        return "( owner: \(self.owner), beginAt: \(self.beginAt). location: \(self.location) message: \(self.message) guests: \(self.guests) )"
     }
     
     func ISO8601StringForBeginAt() -> String {
