@@ -58,6 +58,8 @@
 		2E9D5F071A7CD63400D83481 /* success_to_post_party.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9D5EFF1A7CD63400D83481 /* success_to_post_party.json */; };
 		2EA31A101A7FAA3600FB21A0 /* KPParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA31A0E1A7FAA3600FB21A0 /* KPParty.swift */; };
 		2EA31A111A7FAA3600FB21A0 /* KPGuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA31A0F1A7FAA3600FB21A0 /* KPGuest.swift */; };
+		2EA69C581A82DB5400127381 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA69C561A82DB5400127381 /* Realm.framework */; };
+		2EA69C591A82DB5500127381 /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA69C571A82DB5400127381 /* RLMSupport.swift */; };
 		2ED671D51A7FB15500BFC669 /* KPGuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA31A0F1A7FAA3600FB21A0 /* KPGuest.swift */; };
 		2ED671D61A7FB15800BFC669 /* KPParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA31A0E1A7FAA3600FB21A0 /* KPParty.swift */; };
 		AC9A50FCAE40D2481A76901B /* Pods_kanpai_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D74E5D60AD5BE309E2509DFF /* Pods_kanpai_iosTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -122,6 +124,8 @@
 		2E9D5EFF1A7CD63400D83481 /* success_to_post_party.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success_to_post_party.json; sourceTree = "<group>"; };
 		2EA31A0E1A7FAA3600FB21A0 /* KPParty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KPParty.swift; path = Model/KPParty.swift; sourceTree = "<group>"; };
 		2EA31A0F1A7FAA3600FB21A0 /* KPGuest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KPGuest.swift; path = Model/KPGuest.swift; sourceTree = "<group>"; };
+		2EA69C561A82DB5400127381 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "kanpai-ios/Framework/Realm.framework"; sourceTree = "<group>"; };
+		2EA69C571A82DB5400127381 /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RLMSupport.swift; path = "kanpai-ios/Framework/RLMSupport.swift"; sourceTree = "<group>"; };
 		56AA55E827F33A1046C4CDEF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		654C4915EF2CDD8C7ED07293 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6C090538CEC69B9CDC2F46AD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EA69C581A82DB5400127381 /* Realm.framework in Frameworks */,
 				2E60396B1A7E6501006322D8 /* AddressBookUI.framework in Frameworks */,
 				2E6039691A7E63CB006322D8 /* AddressBook.framework in Frameworks */,
 				B4E4250CA9608510357058E5 /* Pods.framework in Frameworks */,
@@ -155,6 +160,8 @@
 		2C95529BEB263AB41F9B4435 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2EA69C561A82DB5400127381 /* Realm.framework */,
+				2EA69C571A82DB5400127381 /* RLMSupport.swift */,
 				2E60396A1A7E6501006322D8 /* AddressBookUI.framework */,
 				2E6039681A7E63CB006322D8 /* AddressBook.framework */,
 				2E85420B1A7CB1B20038F806 /* libc++.dylib */,
@@ -581,6 +588,7 @@
 				2E09BBE41A7FE2D7003F60A2 /* KPGuestListViewController.swift in Sources */,
 				2E3F846B1A78E75F00E74F68 /* AppDelegate.swift in Sources */,
 				2EA31A111A7FAA3600FB21A0 /* KPGuest.swift in Sources */,
+				2EA69C591A82DB5500127381 /* RLMSupport.swift in Sources */,
 				2E6039721A7E6AD4006322D8 /* KPPersonViewCell.swift in Sources */,
 				2E09BBDE1A7FDFE7003F60A2 /* KPGuestViewCell.swift in Sources */,
 				2E6039651A7E62EA006322D8 /* KPPersonPickerViewController.swift in Sources */,
@@ -719,6 +727,10 @@
 			baseConfigurationReference = 6C090538CEC69B9CDC2F46AD /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/kanpai-ios/Framework",
+				);
 				INFOPLIST_FILE = "kanpai-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "\"-D COCOAPODS\" -DDEBUG";
@@ -732,6 +744,10 @@
 			baseConfigurationReference = 654C4915EF2CDD8C7ED07293 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/kanpai-ios/Framework",
+				);
 				INFOPLIST_FILE = "kanpai-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "\"-D COCOAPODS\"";

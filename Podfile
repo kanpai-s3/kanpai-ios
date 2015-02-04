@@ -5,7 +5,6 @@ platform :ios, '8.0'
 pod 'SZTextView'
 pod 'Alamofire'
 pod 'SwiftyJSON'
-pod 'Realm'
 pod 'AeroGearHttpStub'
 
 target 'kanpai-iosTests' do
