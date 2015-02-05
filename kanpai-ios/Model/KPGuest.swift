@@ -14,6 +14,7 @@ class KPGuest: RLMObject, Printable {
     dynamic var name: String = ""
     dynamic var phoneNumber: String = ""
     dynamic var attendance = false
+    dynamic var contactId: String = ""
     
     override init!() {
         super.init()

@@ -23,9 +23,10 @@ class KPPersonPickerViewController: UITableViewController, ABPersonViewControlle
     private var filteredPersons = [KPPerson]()
     
     private var searchDisplay: UISearchDisplayController?
-    
+
+    private let addressBook = KPAddressBook()
+
     var selectedPersons = [KPPerson]()
-    var addressBook = KPAddressBook()
     var personPickerDelegate: KPPersonPickerViewControllerDelegate?
     
     override func viewDidLoad() {
@@ -68,6 +69,10 @@ class KPPersonPickerViewController: UITableViewController, ABPersonViewControlle
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func filter(block: (KPPerson) -> Bool) {
+        self.addressBook?.filter(block)
     }
     
     private func personsIn(tableView: UITableView) -> [KPPerson] {

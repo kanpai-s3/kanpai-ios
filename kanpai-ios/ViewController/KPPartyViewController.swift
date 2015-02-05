@@ -21,8 +21,13 @@ class KPPartyViewController: UITableViewController {
     private var party = KPParty()
 
     override func viewDidAppear(animated: Bool) {
+        println(KPParty.allObjects())
         if let party = KPParty.allObjects().firstObject() as? KPParty {
-            self.locationLabel?.text = party.location
+            
+//            if party.location != nil && !party.location.isEmpty {
+//                self.locationLabel?.text = party.location
+//            }
+            
             self.beginAtLabel?.text = dateStringFor(party.beginAt)
             
             // MEMO: why is error??

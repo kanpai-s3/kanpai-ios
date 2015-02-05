@@ -54,8 +54,25 @@ class KPGuestListViewController: UITableViewController, KPPersonPickerViewContro
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
     @IBAction func addGuest(sender: AnyObject) {
         let personPicker = KPPersonPickerViewController()
+
+        let ids = self.party.guests.map { (obj) -> String in
+            if let guest = obj as? KPGuest {
+                return guest.contactId
+            } else {
+                return ""
+            }
+        }
+        
+        personPicker.filter { (person) -> Bool in
+            return !contains(ids, person.contactId)
+        }
+        
         personPicker.personPickerDelegate = self
         let navigationController = UINavigationController(rootViewController: personPicker)
         self.presentViewController(navigationController, animated: true, completion: nil)
@@ -67,6 +84,7 @@ class KPGuestListViewController: UITableViewController, KPPersonPickerViewContro
         let realm = RLMRealm.defaultRealm()
         for person in persons {
             let guest = KPGuest(name: person.name, phoneNumber: person.tel!)
+            guest.contactId = person.contactId
             realm.beginWriteTransaction()
             realm.addObject(guest)
             self.party.guests.addObject(guest)

@@ -4,13 +4,13 @@
 //
 //  Copyright (c) 2015年 kanpai. All rights reserved.
 //
-
+import Foundation
 import AddressBook
 
 class KPAddressBook {
     
     private let addressBook: ABAddressBook
-    private var filterBlock: ((KPPerson) -> Bool)?
+    private var filters: [((KPPerson) -> Bool)] = []
     
     init?() {
         var errorRef: Unmanaged<CFErrorRef>?
@@ -23,7 +23,7 @@ class KPAddressBook {
     }
     
     func filter(filterBlock: (KPPerson) -> Bool) -> Self {
-        self.filterBlock = filterBlock
+        self.filters.append(filterBlock)
         return self
     }
     
@@ -56,7 +56,15 @@ class KPAddressBook {
                         let recordRef: ABRecordRef = unsafeBitCast(CFArrayGetValueAtIndex(peopleArrayRef, i), ABRecordRef.self) as ABRecordRef
                         let person = KPPerson(recordRef: recordRef)
                         
-                        if (self.filterBlock != nil) && self.filterBlock!(person) {
+                        var vaild = true
+                        for filterBlock in self.filters {
+                            if !filterBlock(person) {
+                                vaild = false
+                                break
+                            }
+                        }
+                        
+                        if vaild {
                             persons.append(person)
                         }
                     }

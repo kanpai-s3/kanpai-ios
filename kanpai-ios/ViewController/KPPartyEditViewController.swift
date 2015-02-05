@@ -41,7 +41,9 @@ class KPPartyEditViewController: UITableViewController, KPPersonPickerViewContro
         let location = self.locationField?.text ?? ""
         let beginAt  = self.dataPicker?.date ?? NSDate()
         let guests   = self.persons.map { (person) -> KPGuest in
-            return KPGuest(name: person.name, phoneNumber: person.tel!)
+            let guest = KPGuest(name: person.name, phoneNumber: person.tel!)
+            guest.contactId = person.contactId
+            return guest
         }
         let message  = self.messageField?.text ?? ""
         
