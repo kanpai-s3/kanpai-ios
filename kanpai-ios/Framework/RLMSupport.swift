@@ -29,7 +29,21 @@ extension RLMObject {
     }
 }
 
-extension RLMArray: SequenceType {
+extension RLMArray: CollectionType {
+
+    // Support Collection-type
+    public var startIndex: UInt {
+        return 0
+    }
+    
+    public var endIndex: UInt {
+        return self.count
+    }
+    
+    public subscript (position: UInt) -> RLMObject {
+        return (self.objectAtIndex(position) as? RLMObject)!
+    }
+    
     // Support Sequence-style enumeration
     public func generate() -> GeneratorOf<RLMObject> {
         var i: UInt  = 0
@@ -38,7 +52,7 @@ extension RLMArray: SequenceType {
             if (i >= self.count) {
                 return .None
             } else {
-                return self[i++] as? RLMObject
+                return self[i++]
             }
         }
     }
@@ -50,6 +64,14 @@ extension RLMArray: SequenceType {
 
     public func objectsWhere(predicateFormat: String, _ args: CVarArgType...) -> RLMResults {
         return objectsWithPredicate(NSPredicate(format: predicateFormat, arguments: getVaList(args)))
+    }
+    
+    public func map<U>(callback: (RLMObject) -> U) -> [U] {
+        var mapObjects = [U]()
+        for obj in self {
+            mapObjects.append(callback(obj))
+        }
+        return mapObjects
     }
 }
 
